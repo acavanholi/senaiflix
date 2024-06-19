@@ -18,10 +18,11 @@ if (!$result) {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Assinaturas - SENAIFLIZ</title>
+    <title>Assinaturas - SENAIFLIX</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="lista-container">
     <h1>Assinaturas</h1>
     <a href="assinaturas_cadastro.php">Cadastrar Nova Assinatura</a>
     <table>
@@ -29,10 +30,10 @@ if (!$result) {
             <tr>
                 <th>ID</th>
                 <th>Cliente</th>
-                <th>Data de Cadastro</th>
+                <th>Cadastro</th>
                 <th>Plano</th>
-                <th>Data de Início</th>
-                <th>Data Fim</th>
+                <th>Início da Assinatura</th>
+                <th>Fim da Assinatura</th>
                 <th>Última Atualização</th>
                 <th>Status</th>
                 <th>Ações</th>
@@ -63,6 +64,7 @@ if (!$result) {
             <?php endwhile; ?>
         </tbody>
     </table>
+</div>
     <?php include('footer.php'); ?>
 </body>
 </html>

@@ -2,7 +2,7 @@
 include('config.php');
 include('header.php');
 
-$sql = "SELECT * FROM clientes";
+$sql = "SELECT * FROM usuarios";
 $result = $conn->query($sql);
 ?>
 
@@ -10,23 +10,22 @@ $result = $conn->query($sql);
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Clientes - SENAIFLIX</title>
+    <title>Administradores - SENAIFLIX</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
     <div class="lista-container">
-    <h1>Clientes</h1>
+    <h1>Administradores</h1>
 
-    <a href="clientes_cadastro.php">Cadastrar Novo Cliente</a>
+    <a href="registrar.php">Registrar Novo Administrador</a>
     <table>
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nome</th>
-                <th>Email</th>
-                <th>CPF</th>
-                <th>Endereço</th>
+                <th>Usuário</th>
+                <th>Email</th> 
                 <th>Ações</th>
             </tr>
         </thead>
@@ -35,12 +34,11 @@ $result = $conn->query($sql);
                 <tr>
                     <td><?php echo $row['id']; ?></td>
                     <td><?php echo $row['nome']; ?></td>
+                    <td><?php echo $row['usuario']; ?></td>
                     <td><?php echo $row['email']; ?></td>
-                    <td><?php echo $row['cpf']; ?></td>
-                    <td><?php echo $row['endereco']; ?></td>
                     <td>
-                        <a href="clientes_editar.php?id=<?php echo $row['id']; ?>">Editar</a>
-                        <a href="clientes_remover.php?id=<?php echo $row['id']; ?>">Remover</a>
+                        <a href="admin_editar.php?id=<?php echo $row['id']; ?>">Editar</a>
+                        <a href="admin_remover.php?id=<?php echo $row['id']; ?>">Remover</a>
                     </td>
                 </tr>
             <?php endwhile; ?>

@@ -35,6 +35,7 @@ id INT AUTO_INCREMENT PRIMARY KEY,
 id_cliente INT,
 plano VARCHAR(50),
 data_inicio DATE,
+data_fim DATE;
 data_cadastro DATETIME,
 data_atualizacao DATETIME,
 status INT(1),
@@ -53,4 +54,3 @@ data_atualizacao DATETIME,
 status INT(1)
 );
 
-ALTER TABLE assenaiflix_anabeatrizassinaturasassinaturassinaturas ADD COLUMN data_fim DATE;

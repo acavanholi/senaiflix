@@ -14,15 +14,14 @@ if ($stmt = $conn->prepare($sql)) {
     $stmt->bind_param("issi", $id_cliente, $plano, $data_inicio, $status);
     
     if ($stmt->execute()) {
-        echo "<p>Assinatura cadastrada com sucesso!</p>";
-        echo '<p><a href="assinaturas_listar.php">VOLTAR PARA ASSINATURAS</a></p>'; // Link para a lista de assinaturas
+        echo "<h3><br>Assinatura cadastrada com sucesso!</h3>";
     } else {
-        echo "<p>Erro ao cadastrar assinatura: " . $stmt->error . "</p>";
+        echo "<h3>Erro ao cadastrar assinatura: " . $stmt->error . "</h3>";
     }
     
     $stmt->close();
 } else {
-    echo "<p>Erro na preparação da consulta: " . $conn->error . "</p>";
+    echo "<h3>Erro na preparação da consulta: " . $conn->error . "</h3>";
 }
 include('footer.php');
 $conn->close();

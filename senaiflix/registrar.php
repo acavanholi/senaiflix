@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($stmt = $conn->prepare($sql)) {
         $stmt->bind_param("ssss", $nome, $usuario, $senha, $email);
         if ($stmt->execute()) {
-            echo "<p>Administrador cadastrado com sucesso!</p>";
+            echo "<br><h3>Administrador cadastrado com sucesso!</h3>";
         } else {
             echo "<p>Erro ao cadastrar administrador: " . $stmt->error . "</p>";
         }
@@ -33,13 +33,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
-    <br>
-<h2>Registrar Administrador</h2>
+
 
     <div class="form-container">
-
         <form method="post" action="">
             <div class="form-group">
+            <h2>Registrar Administrador</h2>
                 <label for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
             </div>

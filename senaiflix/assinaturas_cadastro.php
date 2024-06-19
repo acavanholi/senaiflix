@@ -12,9 +12,11 @@ include('config.php');
 </head>
 <body>
     <div class="form-container">
-        <h1>Cadastrar Assinatura</h1>
         <form action="assinaturas_cadastro_salvar.php" method="post">
+
             <div class="form-group">
+            <h2>Cadastrar Assinatura</h2>
+
                 <label for="id_cliente">Cliente:</label>
                 <select name="id_cliente" id="id_cliente" required>
                     <?php

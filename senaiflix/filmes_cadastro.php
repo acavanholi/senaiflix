@@ -25,7 +25,7 @@ include('header.php');
             </div>
             <div class="form-group">
                 <label for="ano_lancamento">Ano de Lançamento:</label>
-                <input type="number" id="ano_lancamento" name="ano_lancamento" " required>
+                <input type="date" id="ano_lancamento" name="ano_lancamento" " required>
             </div>
             <div class="form-group">
                 <label for="genero">Gênero:</label>

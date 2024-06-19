@@ -10,10 +10,13 @@ include('header.php');
     <link rel="stylesheet" href="css/style.css"></head>
 </head>
 <body>
-    <h1>Cadastrar Cliente</h1>
+        
+    <div class="form-container">
     <form action="clientes_cadastro_salvar.php" method="post">
-        <div class="form-container">
+
             <div class="form-group">
+            <h2>Cadastrar Cliente</h2>
+
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required>
             </div>
